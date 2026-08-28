@@ -1,12 +1,18 @@
-FROM dunglas/frankenphp:1-php8.4-bookworm
+FROM php:8.3-apache
 
-RUN install-php-extensions pdo_mysql
+RUN docker-php-ext-install pdo_mysql
+
+RUN a2enmod rewrite
 
 RUN cp "$PHP_INI_DIR/php.ini-production" "$PHP_INI_DIR/php.ini" \
     && printf "\nupload_max_filesize=6M\npost_max_size=7M\nsession.cookie_httponly=1\nsession.cookie_samesite=Lax\n" >> "$PHP_INI_DIR/php.ini"
 
-ENV SERVER_NAME=:80
+WORKDIR /var/www/html
+
+COPY . /var/www/html/
+
+RUN chown -R www-data:www-data /var/www/html
+
 ENV APP_ENV=production
 
-WORKDIR /app/public
-COPY . /app/public
+EXPOSE 80
