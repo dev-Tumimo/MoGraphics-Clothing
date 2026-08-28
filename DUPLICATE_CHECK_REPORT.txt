@@ -1,0 +1,30 @@
+MoGraphics Duplicate Cleanup Report
+===================================
+
+No application code was edited.
+The accidental nested duplicate project folder was removed:
+MoGraphics_Clothing/MoGraphics_Clothing/
+
+Duplicate files removed from that nested folder: 20
+- MoGraphics_Clothing/orders.php
+- MoGraphics_Clothing/shop.php
+- MoGraphics_Clothing/cart_update.php
+- MoGraphics_Clothing/index.php
+- MoGraphics_Clothing/checkout.php
+- MoGraphics_Clothing/logout.php
+- MoGraphics_Clothing/cart_add.php
+- MoGraphics_Clothing/product.php
+- MoGraphics_Clothing/register.php
+- MoGraphics_Clothing/cart.php
+- MoGraphics_Clothing/login.php
+- MoGraphics_Clothing/database/mographics.sql
+- MoGraphics_Clothing/admin/index.php
+- MoGraphics_Clothing/includes/functions.php
+- MoGraphics_Clothing/includes/header.php
+- MoGraphics_Clothing/includes/footer.php
+- MoGraphics_Clothing/config/database.php
+- MoGraphics_Clothing/assets/js/app.js
+- MoGraphics_Clothing/assets/css/customer-functions.css
+- MoGraphics_Clothing/assets/css/style.css
+
+The main project files were left unchanged.

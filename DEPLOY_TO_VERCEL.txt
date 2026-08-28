@@ -1,0 +1,27 @@
+MOGRAPHICS — FINAL VERCEL DEPLOYMENT BUILD
+=========================================
+
+This folder is prepared for deployment.
+
+Before the live site can function, create the cloud MySQL database and import:
+database/mographics.sql
+
+Then configure these Vercel environment variables:
+DB_HOST
+DB_PORT
+DB_NAME
+DB_USER
+DB_PASSWORD
+DB_SSL
+
+For live admin product-image uploads also configure:
+CLOUDINARY_CLOUD_NAME
+CLOUDINARY_API_KEY
+CLOUDINARY_API_SECRET
+
+Do not commit real credentials to GitHub.
+
+This build still works locally with XAMPP because database.php falls back to:
+localhost / port 3306 / mographics_clothing / root / blank password.
+
+The website design and customer/admin application files were not redesigned.
